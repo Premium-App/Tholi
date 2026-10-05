@@ -1,0 +1,1795 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --tholi-primary: #8d5624;
+    --tholi-primary-hover: #734318;
+    --tholi-secondary: #b07d4b;
+    --tholi-dark: #2b1c10;
+    --tholi-text: #4a392c;
+    --tholi-muted: #7d6756;
+    --tholi-bg: #faf8f5;
+    --tholi-card-bg: #ffffff;
+    --tholi-border: #ecd9c7;
+    --tholi-radius: 20px;
+    --tholi-font-bn: 'Hind Siliguri', system-ui, sans-serif;
+    --tholi-font-en: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.tholi-body {
+    font-family: var(--tholi-font-bn);
+    background-color: var(--tholi-bg);
+    color: var(--tholi-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.tholi-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* 1. Top Announcement Bar */
+.tholi-topbar {
+    background: linear-gradient(90deg, #9c6644, #b07d4b, #7f4f24);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 0;
+    text-align: center;
+}
+.tholi-topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tholi-topbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    font-weight: 500;
+}
+.tholi-topbar-contact a {
+    color: #fde68a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* 2. Header & Nav */
+.tholi-header {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--tholi-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.tholi-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+.tholi-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+.tholi-brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #b07d4b, #6f4518);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(141, 86, 36, 0.25);
+}
+.tholi-brand-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--tholi-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.1;
+}
+.tholi-badge-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: #8d5624;
+    background: #fdf3e7;
+    padding: 2px 6px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
+.tholi-brand-sub {
+    font-size: 11px;
+    color: var(--tholi-muted);
+    font-weight: 600;
+}
+
+.tholi-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.tholi-nav a {
+    color: #5c4738;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.tholi-nav a:hover {
+    color: var(--tholi-primary);
+}
+.tholi-nav-combo {
+    color: #8d5624 !important;
+    font-weight: 700 !important;
+    background: #fbf1e6;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.tholi-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tholi-btn-wa {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+.tholi-btn-order {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #8d5624, #6d3e14);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(141, 86, 36, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.tholi-btn-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(141, 86, 36, 0.4);
+}
+.tholi-cart-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    color: #8d5624;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tholi-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4a392c;
+    padding: 6px;
+}
+.tholi-mobile-drawer {
+    display: none;
+    background: #fff;
+    border-top: 1px solid var(--tholi-border);
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 8px;
+}
+.tholi-mobile-drawer.open {
+    display: flex;
+}
+.tholi-m-link {
+    text-decoration: none;
+    color: #4a392c;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    background: #faf6f1;
+    border-radius: 8px;
+}
+.tholi-m-combo {
+    background: #fbf1e6;
+    color: #8d5624;
+    font-weight: 700;
+}
+
+/* 3. Hero Section */
+.tholi-hero-section {
+    padding: 30px 0 60px;
+    background: linear-gradient(180deg, #faf4ee 0%, #f7efe7 50%, #faf8f5 100%);
+    position: relative;
+}
+.tholi-pill-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.tholi-pill-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7d6756;
+}
+.tholi-pill {
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid #e4d4c5;
+    background: rgba(255, 255, 255, 0.85);
+    color: #5c4738;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.tholi-pill:hover {
+    background: #fff;
+    border-color: #8d5624;
+}
+.tholi-pill.active {
+    background: #8d5624;
+    color: #fff;
+    border-color: #8d5624;
+    box-shadow: 0 4px 12px rgba(141, 86, 36, 0.25);
+    transform: scale(1.04);
+}
+
+.tholi-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+.tholi-badge-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.tholi-tag-hot {
+    background: #8d5624;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.tholi-tag-cod {
+    background: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.tholi-tag-stock {
+    background: #fff;
+    color: #8d5624;
+    border: 1px solid #ebd8c6;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.tholi-hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--tholi-dark);
+    line-height: 1.15;
+    margin-bottom: 10px;
+    font-family: var(--tholi-font-en), var(--tholi-font-bn);
+}
+.tholi-hero-subtitle {
+    font-size: 16px;
+    color: #6d5646;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.tholi-hero-price-card {
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+.tholi-price-line {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+.tholi-current-price {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--tholi-primary);
+}
+.tholi-old-price {
+    font-size: 18px;
+    color: #9f8877;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+.tholi-discount-badge {
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+.tholi-shipping-note {
+    font-size: 12px;
+    color: #7d6857;
+    margin-top: 4px;
+}
+
+/* Color Swatches */
+.tholi-swatches-wrap {
+    margin-bottom: 24px;
+}
+.tholi-swatch-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.tholi-code-pill {
+    background: #f5e7db;
+    color: #8d5624;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+.tholi-swatches-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.tholi-swatch-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 2px solid #ecd8c6;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4a392c;
+}
+.tholi-swatch-btn:hover {
+    border-color: #b07d4b;
+}
+.tholi-swatch-btn.active {
+    border-color: #8d5624;
+    background: #fbf3ec;
+    box-shadow: 0 2px 8px rgba(141, 86, 36, 0.2);
+}
+.tholi-color-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+/* CTAs */
+.tholi-hero-ctas {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.tholi-btn-main {
+    padding: 15px 28px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #8d5624, #6d3e14);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(141, 86, 36, 0.35);
+    transition: all 0.2s;
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.tholi-btn-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(141, 86, 36, 0.45);
+}
+.tholi-btn-secondary {
+    padding: 15px 22px;
+    border-radius: 16px;
+    background: #fff;
+    color: #6c5443;
+    border: 1px solid #dfcdbd;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tholi-hero-trust-bar {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6d5646;
+    padding-top: 14px;
+    border-top: 1px solid var(--tholi-border);
+    flex-wrap: wrap;
+}
+
+/* Visual Card */
+.tholi-visual-card {
+    background: #fff;
+    border-radius: 28px;
+    border: 1px solid var(--tholi-border);
+    padding: 14px;
+    box-shadow: 0 16px 40px rgba(141, 86, 36, 0.12);
+    position: relative;
+}
+.tholi-visual-sale-tag {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 10px;
+    z-index: 2;
+}
+.tholi-visual-code-tag {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 8px;
+    z-index: 2;
+}
+.tholi-img-container {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f7f3ee;
+}
+.tholi-main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.tholi-visual-card:hover .tholi-main-photo {
+    transform: scale(1.04);
+}
+.tholi-visual-caption {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #faf4ed;
+    border-radius: 14px;
+    border: 1px solid #f0dfd0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tholi-visual-caption strong {
+    display: block;
+    font-size: 14px;
+    color: #3a291d;
+}
+.tholi-visual-caption span {
+    font-size: 12px;
+    color: #7d6553;
+}
+.tholi-caption-price span {
+    font-size: 16px;
+    font-weight: 800;
+    color: #8d5624;
+    display: block;
+    text-align: right;
+}
+.tholi-stock-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #15803d;
+}
+
+.tholi-float-rating {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--tholi-border);
+    border-radius: 18px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: -24px;
+    margin-left: 20px;
+    max-width: 250px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 5;
+}
+.tholi-rating-badge {
+    background: #fef3c7;
+    color: #92400e;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+.tholi-stars {
+    color: #f59e0b;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Stats Banner */
+.tholi-stats-banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+.tholi-stat-item {
+    border-right: 1px solid var(--tholi-border);
+    padding: 6px 12px;
+}
+.tholi-stat-item:last-child {
+    border-right: none;
+}
+.tholi-stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--tholi-primary);
+    display: block;
+}
+.tholi-stat-lbl {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7c6351;
+}
+
+/* Section Header Generic */
+.tholi-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+.tholi-sub-pill {
+    background: #f5e7db;
+    color: #8d5624;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.tholi-section-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--tholi-dark);
+    line-height: 1.25;
+}
+.tholi-section-desc {
+    font-size: 14px;
+    color: #7c6351;
+    margin-top: 6px;
+}
+
+/* 4. Showcase Product Card */
+.tholi-product-card {
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 24px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(141, 86, 36, 0.06);
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 32px;
+    align-items: center;
+}
+.tholi-pc-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.tholi-pc-main-img-box {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #faf6f0;
+    border: 1px solid #ebd8c6;
+    position: relative;
+}
+.tholi-pc-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tholi-pc-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+.tholi-pc-thumb-item {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #ecd8c6;
+    cursor: pointer;
+    background: #fff;
+    padding: 2px;
+}
+.tholi-pc-thumb-item.active {
+    border-color: #8d5624;
+}
+.tholi-pc-thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tholi-pc-info h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #2b1c10;
+}
+.tholi-pc-en-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8d5624;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tholi-pc-desc {
+    font-size: 14px;
+    color: #665040;
+    margin: 10px 0;
+}
+.tholi-pc-price-box {
+    background: #faf5ef;
+    border: 1px solid #eedecf;
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.tholi-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tholi-feature-item {
+    background: #faf8f5;
+    border: 1px solid #eee0d3;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+.tholi-feature-item strong {
+    display: block;
+    color: #3a281c;
+}
+.tholi-feature-item span {
+    color: #7d6756;
+    font-size: 11px;
+}
+
+/* 5. Combo Deal Builder */
+.tholi-combo-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8eee3 0%, #f5e5d3 50%, #ebd7c1 100%);
+}
+.tholi-combo-card {
+    background: #fff;
+    border-radius: 28px;
+    border: 1px solid #ecd4be;
+    padding: 30px;
+    box-shadow: 0 16px 36px rgba(141, 86, 36, 0.12);
+    max-width: 900px;
+    margin: 0 auto;
+}
+.tholi-combo-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+.tholi-combo-col {
+    background: #faf5ef;
+    border: 1px solid #eee0d3;
+    border-radius: 20px;
+    padding: 18px;
+    text-align: center;
+}
+.tholi-combo-badge {
+    background: #8d5624;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.tholi-combo-preview {
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border: 1px solid #ecd9c7;
+    background: #fff;
+}
+.tholi-combo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tholi-combo-select-wrap label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #7d6756;
+    display: block;
+    margin-bottom: 4px;
+}
+.tholi-select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d8c2b0;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3a281c;
+    font-family: inherit;
+    outline: none;
+}
+.tholi-combo-item-price {
+    font-size: 13px;
+    font-weight: 800;
+    color: #8d5624;
+    margin-top: 8px;
+}
+.tholi-combo-plus {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    color: #8d5624;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tholi-combo-action-bar {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #ebd5c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #fffbeb, #fdf8f4);
+    padding: 18px 24px;
+    border-radius: 18px;
+}
+.tholi-combo-save-pill {
+    background: #dcfce7;
+    color: #166534;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+.tholi-combo-final-price {
+    font-size: 32px;
+    font-weight: 800;
+    color: #8d5624;
+}
+.tholi-combo-regular-price {
+    font-size: 16px;
+    color: #9f8877;
+    text-decoration: line-through;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.tholi-combo-shipping-text {
+    font-size: 12px;
+    color: #7e6757;
+}
+
+/* 6. Guarantee & Features */
+.tholi-features-section {
+    padding: 60px 0;
+    background: #fff;
+    border-top: 1px solid var(--tholi-border);
+    border-bottom: 1px solid var(--tholi-border);
+}
+.tholi-guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.tholi-guarantee-card {
+    background: #faf5ef;
+    border: 1px solid #ebd8c6;
+    border-radius: 18px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.tholi-g-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.tholi-guarantee-card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #2e1d11;
+    margin-bottom: 6px;
+}
+.tholi-guarantee-card p {
+    font-size: 12px;
+    color: #705847;
+}
+
+/* Comparison Table */
+.tholi-comparison-box {
+    background: #faf8f5;
+    border: 1px solid var(--tholi-border);
+    border-radius: 24px;
+    padding: 30px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+.tholi-comparison-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #2b1c10;
+}
+.tholi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.tholi-table th, .tholi-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee2d5;
+}
+.tholi-col-highlight {
+    background: #fef8f0;
+    color: #8d5624;
+    font-weight: 700;
+}
+.tholi-col-bad {
+    color: #9f8877;
+    text-decoration: line-through;
+}
+
+/* 7. Checkout Form */
+.tholi-checkout-section {
+    padding: 60px 0;
+    background: #faf5ef;
+    border-top: 1px solid var(--tholi-border);
+}
+.tholi-checkout-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 32px;
+    align-items: flex-start;
+}
+.tholi-checkout-card {
+    background: #fff;
+    border: 1px solid #ebd8c6;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(141, 86, 36, 0.08);
+}
+.tholi-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ecd9c7;
+    margin-bottom: 20px;
+}
+.tholi-step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #fef3c7;
+    color: #8d5624;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.tholi-card-title h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2e1d11;
+}
+
+.tholi-field-group {
+    margin-bottom: 16px;
+}
+.tholi-field-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4a392c;
+    margin-bottom: 6px;
+}
+.tholi-req {
+    color: #dc2626;
+}
+.tholi-input, .tholi-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #d8c2b0;
+    background: #faf8f5;
+    font-size: 14px;
+    font-family: inherit;
+    color: #2e1d11;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+.tholi-input:focus, .tholi-textarea:focus, .tholi-select:focus {
+    background: #fff;
+    border-color: #8d5624;
+}
+.tholi-field-hint {
+    font-size: 11px;
+    color: #8a7566;
+    display: block;
+    margin-top: 4px;
+}
+
+.tholi-zone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.tholi-zone-opt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 2px solid #ecd9c7;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.2s;
+}
+.tholi-zone-opt input {
+    display: none;
+}
+.tholi-zone-opt.active {
+    border-color: #8d5624;
+    background: #fffaf5;
+}
+.tholi-zone-info strong {
+    display: block;
+    font-size: 13px;
+    color: #2e1d11;
+}
+.tholi-zone-info small {
+    font-size: 11px;
+    color: #8a7566;
+}
+.tholi-zone-price {
+    font-size: 15px;
+    font-weight: 800;
+    color: #8d5624;
+}
+
+/* Cart Items inside Checkout */
+.tholi-cart-items-list {
+    max-height: 280px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee0d3;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+.tholi-c-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5ede4;
+}
+.tholi-c-item img {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ecd9c7;
+}
+.tholi-c-details {
+    flex: 1;
+    min-width: 0;
+}
+.tholi-c-details h4 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #2e1d11;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tholi-c-details p {
+    font-size: 11px;
+    color: #7d6655;
+}
+.tholi-c-price {
+    font-size: 13px;
+    font-weight: 800;
+    color: #8d5624;
+}
+.tholi-qty-ctrl {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ecd9c7;
+    border-radius: 8px;
+    padding: 2px;
+    background: #faf8f5;
+}
+.tholi-qty-btn {
+    width: 22px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: #5c4737;
+}
+.tholi-qty-val {
+    width: 22px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+.tholi-del-btn {
+    background: none;
+    border: none;
+    color: #a89586;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+}
+.tholi-del-btn:hover {
+    color: #dc2626;
+}
+
+.tholi-combo-hint-banner {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #92400e;
+    margin-bottom: 14px;
+}
+
+.tholi-coupon-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+.tholi-input-coupon {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #d8c2b0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.tholi-btn-coupon {
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: #8d5624;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tholi-coupon-feedback {
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.tholi-price-breakdown {
+    border-top: 1px solid #eee0d3;
+    padding-top: 12px;
+    font-size: 13px;
+}
+.tholi-b-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    color: #5c4737;
+}
+.tholi-discount-row {
+    color: #15803d;
+    font-weight: 700;
+}
+.tholi-total-row {
+    border-top: 2px solid #8d5624;
+    padding-top: 10px;
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #2e1d11;
+}
+.tholi-total-row strong {
+    color: #8d5624;
+    font-size: 24px;
+}
+
+.tholi-btn-place-order {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #8d5624, #6d3e14);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(141, 86, 36, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+.tholi-btn-place-order:hover {
+    transform: translateY(-2px);
+}
+.tholi-cod-notice {
+    margin-top: 14px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #065f46;
+}
+
+/* 8. Customer Reviews */
+.tholi-reviews-section {
+    padding: 60px 0;
+    background: #faf6f1;
+    border-bottom: 1px solid var(--tholi-border);
+}
+.tholi-review-rating-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+.tholi-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.tholi-review-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--tholi-border);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tholi-rev-stars {
+    color: #f59e0b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.tholi-rev-text {
+    font-size: 13px;
+    color: #4a392c;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.tholi-rev-author strong {
+    display: block;
+    font-size: 13px;
+    color: #2e1d11;
+}
+.tholi-rev-author small {
+    display: block;
+    font-size: 11px;
+    color: #7d6756;
+}
+.tholi-verified-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #15803d;
+    background: #ecfdf5;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-top: 4px;
+}
+
+/* 9. FAQ */
+.tholi-faq-section {
+    padding: 60px 0;
+    background: #faf8f5;
+}
+.tholi-faq-accordion {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.tholi-faq-item {
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.tholi-faq-q {
+    width: 100%;
+    padding: 16px 20px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2e1d11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+}
+.tholi-faq-a {
+    display: none;
+    padding: 0 20px 16px;
+    font-size: 13px;
+    color: #665040;
+    line-height: 1.6;
+}
+.tholi-faq-item.open .tholi-faq-a {
+    display: block;
+}
+.tholi-faq-item.open .tholi-faq-arrow {
+    transform: rotate(180deg);
+}
+
+.tholi-faq-cta-banner {
+    max-width: 720px;
+    margin: 30px auto 0;
+    background: linear-gradient(90deg, #fef3c7, #faf4ee);
+    border: 1px solid #ecd9c7;
+    border-radius: 16px;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.tholi-btn-call {
+    background: #8d5624;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* 10. Footer */
+.tholi-footer {
+    background: #241912;
+    color: #d6c4b5;
+    padding: 60px 0 30px;
+    border-top: 1px solid #3d2b1f;
+}
+.tholi-footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #3d2b1f;
+}
+.tholi-footer-heading {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+.tholi-footer-desc {
+    font-size: 12px;
+    color: #a89586;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.tholi-footer-links {
+    list-style: none;
+}
+.tholi-footer-links li {
+    margin-bottom: 8px;
+}
+.tholi-footer-links a {
+    color: #d6c4b5;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+.tholi-footer-links a:hover {
+    color: #fff;
+}
+.tholi-footer-contact p {
+    font-size: 12px;
+    color: #a89586;
+    margin-bottom: 6px;
+}
+.tholi-footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+.tholi-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    font-size: 12px;
+    color: #8f7d70;
+}
+
+/* 11. Modal, FAB & Sticky Bar */
+.tholi-fab-wa {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.tholi-fab-wa:hover {
+    transform: scale(1.1);
+}
+.tholi-fab-svg {
+    width: 30px;
+    height: 30px;
+}
+.tholi-fab-ping {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ef4444;
+    border: 2px solid #fff;
+}
+
+.tholi-live-sale-toast {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--tholi-border);
+    border-radius: 16px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    z-index: 98;
+    max-width: 320px;
+    transition: transform 0.3s;
+}
+.tholi-toast-icon {
+    font-size: 24px;
+}
+.tholi-toast-info strong {
+    display: block;
+    font-size: 12px;
+    color: #2e1d11;
+}
+.tholi-toast-info span {
+    display: block;
+    font-size: 11px;
+    color: #8d5624;
+    font-weight: 700;
+}
+.tholi-toast-time {
+    font-size: 10px;
+    color: #15803d;
+}
+.tholi-toast-close {
+    background: none;
+    border: none;
+    color: #a89586;
+    cursor: pointer;
+}
+
+.tholi-sticky-mobile-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--tholi-border);
+    padding: 10px 16px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 90;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+}
+.tholi-sticky-lbl {
+    font-size: 10px;
+    color: #8a7566;
+    display: block;
+}
+.tholi-sticky-val {
+    font-size: 16px;
+    font-weight: 800;
+    color: #8d5624;
+}
+.tholi-sticky-cta {
+    background: linear-gradient(135deg, #8d5624, #6d3e14);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* Modal Overlay */
+.tholi-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.tholi-modal-box {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--tholi-border);
+}
+.tholi-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f5ede4;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+}
+.tholi-modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tholi-modal-success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+.tholi-modal-badge {
+    font-size: 11px;
+    font-weight: 800;
+    color: #8d5624;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tholi-modal-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2e1d11;
+}
+
+.tholi-track-bar {
+    background: #faf6f0;
+    border: 1px solid #ecd9c7;
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+.tholi-track-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #8d5624;
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.tholi-track-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 4px;
+}
+.tholi-t-step small {
+    display: block;
+    font-size: 9px;
+    color: #8a7566;
+    margin-top: 4px;
+}
+.tholi-t-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.tholi-t-step.active .tholi-t-num {
+    background: #15803d;
+    color: #fff;
+}
+
+.tholi-modal-details {
+    border: 1px solid #eee0d3;
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.tholi-md-header {
+    border-bottom: 1px solid #f2e6dc;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+.tholi-md-costs {
+    border-top: 1px solid #f2e6dc;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+.tholi-md-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.tholi-md-total {
+    border-top: 1px solid #8d5624;
+    padding-top: 6px;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #2e1d11;
+}
+.tholi-md-total strong {
+    color: #8d5624;
+}
+
+.tholi-modal-shipping-info {
+    background: #faf8f5;
+    border: 1px solid #eee0d3;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.tholi-modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.tholi-btn-modal-wa {
+    background: #16a34a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+.tholi-btn-modal-print {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .tholi-nav {
+        display: none;
+    }
+    .tholi-mobile-toggle {
+        display: block;
+    }
+    .tholi-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .tholi-hero-title {
+        font-size: 32px;
+    }
+    .tholi-price-line {
+        justify-content: center;
+    }
+    .tholi-swatch-header {
+        justify-content: center;
+    }
+    .tholi-swatches-list {
+        justify-content: center;
+    }
+    .tholi-hero-ctas {
+        justify-content: center;
+    }
+    .tholi-hero-trust-bar {
+        justify-content: center;
+    }
+    .tholi-stats-banner {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .tholi-stat-item:nth-child(2) {
+        border-right: none;
+    }
+    .tholi-product-card {
+        grid-template-columns: 1fr;
+    }
+    .tholi-combo-grid {
+        grid-template-columns: 1fr;
+    }
+    .tholi-combo-action-bar {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .tholi-guarantee-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .tholi-checkout-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .tholi-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .tholi-footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .tholi-sticky-mobile-bar {
+        display: flex;
+    }
+    body.tholi-body {
+        padding-bottom: 60px;
+    }
+}
