@@ -22,6 +22,9 @@ get_header();
     <!-- 4. Features & Comparison Table -->
     <?php get_template_part('template-parts/features'); ?>
 
+    <!-- 4.1 What Fits Inside & Logistics Guarantee -->
+    <?php get_template_part('template-parts/capacity'); ?>
+
     <!-- 5. 1-Step Instant Cash on Delivery Checkout Form -->
     <?php get_template_part('template-parts/checkout-form'); ?>
 
@@ -33,6 +36,9 @@ get_header();
 
     <!-- 8. Order Success Modal Receipt -->
     <?php get_template_part('template-parts/order-modal'); ?>
+
+    <!-- 9. Live Order Tracking Modal & Lightbox -->
+    <?php get_template_part('template-parts/tracking-modal'); ?>
 
 </main>
 

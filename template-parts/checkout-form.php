@@ -76,6 +76,30 @@
                         <textarea id="cust-address" name="customer_address" rows="2" placeholder="যেমন: বাসা ১২, রোড ৫, ব্লক সি, ধানমন্ডি, ঢাকা" required class="tholi-textarea"></textarea>
                     </div>
 
+                    <!-- Payment Method Selector -->
+                    <div class="tholi-field-group tholi-payment-selector">
+                        <label>পেমেন্ট মেথড নির্বাচন করুন: <span class="tholi-req">*</span></label>
+                        <div class="tholi-payment-options">
+                            <label class="tholi-pay-opt active" id="pay-opt-cod">
+                                <input type="radio" name="payment_method" value="cod" checked>
+                                <span class="tholi-pay-opt-icon">💵</span>
+                                <div class="tholi-pay-opt-text">
+                                    <strong>ক্যাশ অন ডেলিভারি (COD)</strong>
+                                    <small>পণ্য হাতে পেয়ে দেখে টাকা দিন</small>
+                                </div>
+                            </label>
+
+                            <label class="tholi-pay-opt" id="pay-opt-bkash">
+                                <input type="radio" name="payment_method" value="bkash">
+                                <span class="tholi-pay-opt-icon">📱</span>
+                                <div class="tholi-pay-opt-text">
+                                    <strong>বিকাশ / নগদ পেমেন্ট</strong>
+                                    <small>অগ্রিম পেমেন্টে স্পেশাল গিফট</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Order Notes (Optional) -->
                     <div class="tholi-field-group">
                         <label for="cust-notes">বিশেষ নির্দেশনা (ঐচ্ছিক)</label>

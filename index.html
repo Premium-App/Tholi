@@ -47,6 +47,9 @@
 
         <!-- Right Action Buttons -->
         <div class="tholi-header-actions">
+            <button type="button" class="tholi-track-btn" id="btn-open-tracking" style="padding: 6px 12px; font-size: 12px; background: #faf4ee; color: #8d5624; border: 1px solid #dfc3aa;">
+                🔍 ট্র্যাক অর্ডার
+            </button>
             <a href="https://wa.me/8801793648214" target="_blank" class="tholi-btn-wa">
                 <span class="tholi-wa-icon">💬</span>
                 <span class="tholi-wa-text">WhatsApp</span>
@@ -100,12 +103,49 @@
                         স্টাইলিশ, প্রিমিয়াম এবং প্রতিদিনের জন্য পারফেক্ট — প্রিমিয়াম সিনথেটিক লেদার ও সিগনেচার সিল্ক স্কার্ফ ডিজাইন।
                     </p>
 
+                    <!-- 1. Flash Sale Urgency Timer -->
+                    <div class="tholi-flash-deal-banner">
+                        <div class="tholi-flash-title">
+                            <span class="tholi-flash-icon">⚡</span>
+                            <span>আজকের স্পেশাল ফ্ল্যাশ ডিল শেষ হতে বাকি:</span>
+                        </div>
+                        <div class="tholi-timer-units">
+                            <div class="tholi-timer-box">
+                                <span class="tholi-timer-val" id="timer-hours">03</span>
+                                <span class="tholi-timer-lbl">ঘণ্টা</span>
+                            </div>
+                            <span class="tholi-timer-colon">:</span>
+                            <div class="tholi-timer-box">
+                                <span class="tholi-timer-val" id="timer-minutes">45</span>
+                                <span class="tholi-timer-lbl">মিনিট</span>
+                            </div>
+                            <span class="tholi-timer-colon">:</span>
+                            <div class="tholi-timer-box">
+                                <span class="tholi-timer-val" id="timer-seconds">18</span>
+                                <span class="tholi-timer-lbl">সেকেন্ড</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Price Card -->
                     <div class="tholi-hero-price-card">
                         <div class="tholi-price-line">
                             <span class="tholi-current-price" id="hero-price">৳১,০৯৯</span>
                             <span class="tholi-old-price" id="hero-old-price">৳১,৬৫০</span>
                             <span class="tholi-discount-badge" id="hero-discount">৩৩% ছাড়!</span>
                         </div>
+
+                        <!-- 2. Stock Scarcity Bar -->
+                        <div class="tholi-stock-scarcity">
+                            <div class="tholi-stock-text">
+                                <span>🔥 স্টক প্রায় শেষ! আর মাত্র <strong id="live-stock-count">১৪টি</strong> ব্যাগ বাকি</span>
+                                <span>৮২% স্টক বুকড</span>
+                            </div>
+                            <div class="tholi-progress-track">
+                                <div class="tholi-progress-fill" id="live-stock-bar" style="width: 28%;"></div>
+                            </div>
+                        </div>
+
                         <p class="tholi-shipping-note">
                             📦 ডেলিভারি চার্জ: ঢাকায় ৳৮০ · ঢাকার বাইরে ৳১৫০ (পণ্য হাতে পেয়ে টাকা দিন)
                         </p>
@@ -341,6 +381,84 @@
         </div>
     </section>
 
+    <!-- 4.1 What Fits Inside Visualizer -->
+    <section class="tholi-capacity-section">
+        <div class="tholi-container">
+            
+            <div class="tholi-section-header" style="margin-bottom: 20px;">
+                <span class="tholi-sub-pill">👜 স্পেস ও ক্যাপাসিটি</span>
+                <h2 class="tholi-section-title">ব্যাগে কী কী আঁটবে?</h2>
+                <p class="tholi-section-desc">
+                    দৈনন্দিন ব্যবহারের যাবতীয় প্রয়োজনীয় জিনিস গুছিয়ে রাখার মতো পর্যাপ্ত ও নিরাপদ স্পেস রয়েছে।
+                </p>
+            </div>
+
+            <div class="tholi-capacity-grid">
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">📱</span>
+                    <strong class="tholi-cap-name">স্মার্টফোন</strong>
+                    <span class="tholi-cap-desc">যেকোনো বড় স্ক্রিন ফোন</span>
+                </div>
+
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">💻</span>
+                    <strong class="tholi-cap-name">আইপ্যাড / ট্যাব</strong>
+                    <span class="tholi-cap-desc">১০.৫ ইঞ্চি ডায়েরি বা ট্যাব</span>
+                </div>
+
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">👛</span>
+                    <strong class="tholi-cap-name">লং ওয়ালেট</strong>
+                    <span class="tholi-cap-desc">টাকা ও কার্ড হোল্ডার</span>
+                </div>
+
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">💄</span>
+                    <strong class="tholi-cap-name">মেকআপ কিট</strong>
+                    <span class="tholi-cap-desc">লিপস্টিক, কমপ্যাক্ট ও লোশন</span>
+                </div>
+
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">☂️</span>
+                    <strong class="tholi-cap-name">ফোল্ডিং ছাতা</strong>
+                    <span class="tholi-cap-desc">মিনি ছাতা বা সানগ্লাস</span>
+                </div>
+
+                <div class="tholi-capacity-item">
+                    <span class="tholi-cap-icon">🔑</span>
+                    <strong class="tholi-cap-name">চাবি ও গ্যাজেট</strong>
+                    <span class="tholi-cap-desc">এয়ারপডস ও পাওয়ার ব্যাংক</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4.2 Courier Logistics Partners Ribbon -->
+    <div class="tholi-courier-strip">
+        <div class="tholi-container">
+            <div class="tholi-courier-title">আমাদের অফিসিয়াল ডেলিভারি ও লজিস্টিক পার্টনারসমূহ</div>
+            <div class="tholi-courier-badges">
+                <div class="tholi-courier-tag">
+                    <span>🚚</span>
+                    <span>Steadfast Courier</span>
+                </div>
+                <div class="tholi-courier-tag">
+                    <span>⚡</span>
+                    <span>Pathao Courier</span>
+                </div>
+                <div class="tholi-courier-tag">
+                    <span>📦</span>
+                    <span>RedX Logistics</span>
+                </div>
+                <div class="tholi-courier-tag">
+                    <span>🏙️</span>
+                    <span>Paperfly Go</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 5. 1-Step Cash on Delivery Checkout Form -->
     <section class="tholi-checkout-section" id="checkout">
         <div class="tholi-container">
@@ -405,9 +523,39 @@
                             <textarea id="cust-address" name="customer_address" rows="2" placeholder="যেমন: বাসা ১২, রোড ৫, ব্লক সি, ধানমন্ডি, ঢাকা" required class="tholi-textarea"></textarea>
                         </div>
 
+                        <!-- Payment Method Selector -->
+                        <div class="tholi-field-group tholi-payment-selector">
+                            <label>পেমেন্ট মেথড নির্বাচন করুন: <span class="tholi-req">*</span></label>
+                            <div class="tholi-payment-options">
+                                <label class="tholi-pay-opt active" id="pay-opt-cod">
+                                    <input type="radio" name="payment_method" value="cod" checked>
+                                    <span class="tholi-pay-opt-icon">💵</span>
+                                    <div class="tholi-pay-opt-text">
+                                        <strong>ক্যাশ অন ডেলিভারি (COD)</strong>
+                                        <small>পণ্য হাতে পেয়ে দেখে টাকা দিন</small>
+                                    </div>
+                                </label>
+
+                                <label class="tholi-pay-opt" id="pay-opt-bkash">
+                                    <input type="radio" name="payment_method" value="bkash">
+                                    <span class="tholi-pay-opt-icon">📱</span>
+                                    <div class="tholi-pay-opt-text">
+                                        <strong>বিকাশ / নগদ পেমেন্ট</strong>
+                                        <small>অগ্রিম পেমেন্টে স্পেশাল গিফট</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Conditional bKash Instructions Box -->
+                        <div id="bkash-instructions" style="display: none; background: #fff8f5; border: 1px dashed #e11d48; border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; font-size: 13px;">
+                            <strong style="color: #e11d48; display: block; margin-bottom: 4px;">📱 বিকাশ / নগদ মার্চেন্ট পেমেন্ট নম্বর: 01793-648214 (Personal/Send Money)</strong>
+                            <p style="color: #64748b; margin: 0; font-size: 12px;">টাকা পাঠানোর পর ট্রানজেকশন আইডি (TrxID) নিচের নোট বক্সে লিখে দিতে পারেন অথবা আমাদের হোয়াটসঅ্যাপে স্ক্রিনশট পাঠিয়ে কনফার্ম করুন।</p>
+                        </div>
+
                         <div class="tholi-field-group">
-                            <label for="cust-notes">বিশেষ নির্দেশনা (ঐচ্ছিক)</label>
-                            <input type="text" id="cust-notes" name="customer_notes" placeholder="যেমন: ডেলিভারির আগে কল করবেন..." class="tholi-input">
+                            <label for="cust-notes">বিশেষ নির্দেশনা বা TrxID (ঐচ্ছিক)</label>
+                            <input type="text" id="cust-notes" name="customer_notes" placeholder="যেমন: ডেলিভারির আগে কল করবেন / TrxID: 9K72..." class="tholi-input">
                         </div>
                     </form>
                 </div>
@@ -737,6 +885,77 @@
             <button type="button" class="tholi-btn-modal-print" onclick="window.print()">
                 🖨️ ইনভয়েস প্রিন্ট বা সেভ করুন
             </button>
+        </div>
+    </div>
+</div>
+
+<!-- 9. Live Order Tracking Modal -->
+<div class="tholi-modal-overlay" id="tholi-tracking-modal" style="display: none;">
+    <div class="tholi-modal-box">
+        <button type="button" class="tholi-modal-close" id="tracking-modal-close">✕</button>
+
+        <div class="tholi-modal-header">
+            <div class="tholi-modal-success-icon" style="background: #fef3c7; color: #8d5624;">🔍</div>
+            <span class="tholi-modal-badge">লাইভ পার্সেল ট্র্যাকিং</span>
+            <h3>আপনার অর্ডার ট্র্যাক করুন</h3>
+            <p>আপনার অর্ডার আইডি বা মোবাইল নম্বর দিয়ে বর্তমান অবস্থা জানুন।</p>
+        </div>
+
+        <form id="tholi-tracking-form" class="tholi-track-search-box">
+            <input type="text" id="track-input" placeholder="অর্ডার আইডি (যেমন: 102938) বা ফোন..." required class="tholi-track-input">
+            <button type="submit" id="track-search-btn" class="tholi-track-btn">ট্র্যাক করুন</button>
+        </form>
+
+        <div id="tracking-result-box" style="display: none;">
+            <div class="tholi-track-bar" style="margin-top: 14px;">
+                <span class="tholi-track-title" id="track-result-id" style="font-size: 13px;">#TH-102938</span>
+                <div class="tholi-track-steps">
+                    <div class="tholi-t-step active">
+                        <span class="tholi-t-num">✓</span>
+                        <small>কনফার্মড</small>
+                    </div>
+                    <div class="tholi-t-step active">
+                        <span class="tholi-t-num">✓</span>
+                        <small>প্যাকিং শেষ</small>
+                    </div>
+                    <div class="tholi-t-step active">
+                        <span class="tholi-t-num" style="background: #ea580c; color: #fff;">৩</span>
+                        <small style="color: #ea580c; font-weight: 700;">কুরিয়ারে আছে</small>
+                    </div>
+                    <div class="tholi-t-step">
+                        <span class="tholi-t-num">৪</span>
+                        <small>ডেলিভার্ড</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tholi-modal-shipping-info" style="margin-bottom: 10px;">
+                <p><strong>বর্তমান অবস্থা:</strong> <span style="color: #ea580c; font-weight: 700;">পার্সেলটি আপনার জেলায় ডেলিভারির পথে রয়েছে</span></p>
+                <p><strong>কুরিয়ার পার্টনার:</strong> Steadfast / Pathao Express</p>
+                <p><strong>তারিখ:</strong> <span id="track-result-date"></span></p>
+            </div>
+        </div>
+
+        <div class="tholi-modal-actions" style="margin-top: 14px;">
+            <a href="https://wa.me/8801793648214" target="_blank" class="tholi-btn-modal-wa">
+                💬 কোনো সমস্যা হলে কাস্টমার সাপোর্টে মেসেজ দিন
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 10. Image Lightbox Zoom Modal -->
+<div class="tholi-lightbox-overlay" id="tholi-lightbox" style="display: none;">
+    <div class="tholi-lightbox-card">
+        <button type="button" class="tholi-modal-close" id="tholi-lightbox-close" style="z-index: 10;">✕</button>
+        <div class="tholi-lightbox-img-wrap">
+            <img id="tholi-lightbox-img" src="" alt="Zoomed view">
+        </div>
+        <div class="tholi-lightbox-footer">
+            <strong id="tholi-lightbox-caption">থলি নোভা টোট ব্যাগ</strong>
+            <a href="#checkout" class="tholi-btn-main" style="padding: 8px 18px; font-size: 13px; text-decoration: none;">
+                🛒 এখনই এই ব্যাগটি নিন
+            </a>
         </div>
     </div>
 </div>

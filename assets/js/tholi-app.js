@@ -769,6 +769,105 @@
     });
 
     /* ========================================================
+       7. FLASH DEAL COUNTDOWN & STOCK SCARCITY METER
+    ======================================================== */
+    function initFlashTimer() {
+        // 3 hours 45 mins countdown
+        let totalSeconds = (3 * 3600) + (45 * 60) + 18;
+        
+        function updateTimer() {
+            if (totalSeconds <= 0) totalSeconds = 4 * 3600; // loop
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = totalSeconds % 60;
+
+            const format = num => String(num).padStart(2, '0');
+            $('#timer-hours').text(format(h));
+            $('#timer-minutes').text(format(m));
+            $('#timer-seconds').text(format(s));
+            totalSeconds--;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    function initStockScarcity() {
+        let stock = 14;
+        setInterval(function() {
+            // randomly decrease stock occasionally to simulate live buys
+            if (Math.random() > 0.6 && stock > 4) {
+                stock -= 1;
+                $('#live-stock-count').text(stock);
+                const percent = Math.max(10, Math.round((stock / 50) * 100));
+                $('#live-stock-bar').css('width', percent + '%');
+            }
+        }, 12000);
+    }
+
+    /* ========================================================
+       8. PAYMENT METHOD SELECTOR TOGGLE
+    ======================================================== */
+    function initPaymentSelector() {
+        $('input[name="payment_method"]').on('change', function() {
+            const method = $(this).val();
+            if (method === 'bkash' || method === 'nagad') {
+                $('#bkash-instructions').slideDown(200);
+            } else {
+                $('#bkash-instructions').slideUp(200);
+            }
+        });
+    }
+
+    /* ========================================================
+       9. LIVE ORDER TRACKING MODAL & LIGHTBOX
+    ======================================================== */
+    function initTrackingModal() {
+        $('#btn-open-tracking, .tholi-track-btn').on('click', function(e) {
+            e.preventDefault();
+            $('#tholi-tracking-modal').fadeIn(200);
+        });
+
+        $('#tracking-modal-close').on('click', function() {
+            $('#tholi-tracking-modal').fadeOut(200);
+        });
+
+        $('#tholi-tracking-form').on('submit', function(e) {
+            e.preventDefault();
+            const query = $('#track-input').val().trim();
+            if (!query) return;
+
+            $('#track-search-btn').text('খোঁজা হচ্ছে...').prop('disabled', true);
+
+            setTimeout(function() {
+                $('#track-search-btn').text('ট্র্যাক করুন').prop('disabled', false);
+                $('#track-result-id').text('#' + (query.startsWith('#') ? query.substring(1) : query));
+                $('#track-result-date').text(new Date().toLocaleDateString('bn-BD', { day: 'numeric', month: 'long', year: 'numeric' }));
+                $('#tracking-result-box').slideDown(250);
+            }, 600);
+        });
+    }
+
+    function initLightbox() {
+        // Clicking on showcase main image opens zoomed view
+        $(document).on('click', '.tholi-showcase-preview img, .tholi-hero-card img, .tholi-product-card img', function() {
+            const src = $(this).attr('src');
+            const title = $(this).attr('alt') || 'থলি প্রিমিয়াম ব্যাগ';
+            if (src) {
+                $('#tholi-lightbox-img').attr('src', src);
+                $('#tholi-lightbox-caption').text(title);
+                $('#tholi-lightbox').fadeIn(200);
+            }
+        });
+
+        $('#tholi-lightbox-close, #tholi-lightbox').on('click', function(e) {
+            if (e.target !== document.getElementById('tholi-lightbox-img')) {
+                $('#tholi-lightbox').fadeOut(200);
+            }
+        });
+    }
+
+    /* ========================================================
        INITIALIZATION
     ======================================================== */
     $(document).ready(function() {
@@ -777,6 +876,11 @@
         initComboBuilder();
         initDistricts();
         updateCartDisplay();
+        initFlashTimer();
+        initStockScarcity();
+        initPaymentSelector();
+        initTrackingModal();
+        initLightbox();
     });
 
 })(window.jQuery || {

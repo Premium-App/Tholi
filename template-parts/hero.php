@@ -31,6 +31,30 @@ $theme_uri = get_template_directory_uri();
                     স্টাইলিশ, প্রিমিয়াম এবং প্রতিদিনের জন্য পারফেক্ট — প্রিমিয়াম সিনথেটিক লেদার ও সিগনেচার সিল্ক স্কার্ফ ডিজাইন।
                 </p>
 
+                <!-- 1. Flash Sale Urgency Timer -->
+                <div class="tholi-flash-deal-banner">
+                    <div class="tholi-flash-title">
+                        <span class="tholi-flash-icon">⚡</span>
+                        <span>আজকের স্পেশাল ফ্ল্যাশ ডিল শেষ হতে বাকি:</span>
+                    </div>
+                    <div class="tholi-timer-units">
+                        <div class="tholi-timer-box">
+                            <span class="tholi-timer-val" id="timer-hours">04</span>
+                            <span class="tholi-timer-lbl">ঘণ্টা</span>
+                        </div>
+                        <span class="tholi-timer-colon">:</span>
+                        <div class="tholi-timer-box">
+                            <span class="tholi-timer-val" id="timer-minutes">28</span>
+                            <span class="tholi-timer-lbl">মিনিট</span>
+                        </div>
+                        <span class="tholi-timer-colon">:</span>
+                        <div class="tholi-timer-box">
+                            <span class="tholi-timer-val" id="timer-seconds">45</span>
+                            <span class="tholi-timer-lbl">সেকেন্ড</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Hero Price Card -->
                 <div class="tholi-hero-price-card">
                     <div class="tholi-price-line">
@@ -38,6 +62,18 @@ $theme_uri = get_template_directory_uri();
                         <span class="tholi-old-price" id="hero-old-price">৳১,৬৫০</span>
                         <span class="tholi-discount-badge" id="hero-discount">৩৩% ছাড়!</span>
                     </div>
+
+                    <!-- 2. Stock Scarcity Bar -->
+                    <div class="tholi-stock-scarcity">
+                        <div class="tholi-stock-text">
+                            <span>🔥 স্টক প্রায় শেষ! আর মাত্র <strong id="hero-stock-left">৭টি</strong> ব্যাগ বাকি</span>
+                            <span id="hero-stock-pct">৮৭% বিক্রি হয়েছে</span>
+                        </div>
+                        <div class="tholi-progress-track">
+                            <div class="tholi-progress-fill" id="hero-stock-fill" style="width: 87%;"></div>
+                        </div>
+                    </div>
+
                     <p class="tholi-shipping-note">
                         📦 ডেলিভারি চার্জ: ঢাকায় ৳৮০ · ঢাকার বাইরে ৳১৫০ (পণ্য হাতে পেয়ে টাকা দিন)
                     </p>

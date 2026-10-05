@@ -46,6 +46,9 @@
 
         <!-- Right Action Buttons -->
         <div class="tholi-header-actions">
+            <button type="button" class="tholi-track-btn" id="btn-open-tracking" style="padding: 6px 12px; font-size: 12px; background: #faf4ee; color: #8d5624; border: 1px solid #dfc3aa;">
+                🔍 ট্র্যাক অর্ডার
+            </button>
             <a href="https://wa.me/8801793648214" target="_blank" class="tholi-btn-wa">
                 <span class="tholi-wa-icon">💬</span>
                 <span class="tholi-wa-text">WhatsApp</span>

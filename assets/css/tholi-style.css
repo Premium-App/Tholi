@@ -1793,3 +1793,313 @@ body.tholi-body {
         padding-bottom: 60px;
     }
 }
+
+/* ========================================================
+   NEW ULTRA-PREMIUM FEATURES STYLES
+======================================================== */
+
+/* 1. Flash Sale Urgency Timer */
+.tholi-flash-deal-banner {
+    background: linear-gradient(135deg, #78350f, #92400e, #b45309);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 14px rgba(120, 53, 15, 0.25);
+    border: 1px solid rgba(254, 215, 170, 0.3);
+}
+.tholi-flash-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
+.tholi-flash-icon {
+    font-size: 18px;
+    animation: pulseIcon 1.5s infinite;
+}
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+.tholi-timer-units {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.tholi-timer-box {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 4px 8px;
+    text-align: center;
+    min-width: 44px;
+}
+.tholi-timer-val {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fef08a;
+    display: block;
+    line-height: 1.1;
+    font-family: var(--tholi-font-en), monospace;
+}
+.tholi-timer-lbl {
+    font-size: 9px;
+    color: #fed7aa;
+    text-transform: uppercase;
+}
+.tholi-timer-colon {
+    font-weight: 800;
+    font-size: 16px;
+    color: #fef08a;
+}
+
+/* 2. Stock Scarcity Progress Bar */
+.tholi-stock-scarcity {
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 14px 0;
+}
+.tholi-stock-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c2410c;
+    margin-bottom: 6px;
+}
+.tholi-progress-track {
+    width: 100%;
+    height: 8px;
+    background: #fed7aa;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.tholi-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ea580c, #dc2626);
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+/* 3. Interactive Capacity Visualizer: "ব্যাগে কী কী আঁটবে?" */
+.tholi-capacity-section {
+    padding: 50px 0;
+    background: #ffffff;
+    border-top: 1px solid var(--tholi-border);
+}
+.tholi-capacity-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+.tholi-capacity-item {
+    background: #faf6f1;
+    border: 1px solid #ecd9c7;
+    border-radius: 16px;
+    padding: 16px 10px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.tholi-capacity-item:hover {
+    transform: translateY(-3px);
+    border-color: #8d5624;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(141, 86, 36, 0.08);
+}
+.tholi-cap-icon {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 8px;
+}
+.tholi-cap-name {
+    font-size: 12px;
+    font-weight: 800;
+    color: #2e1d11;
+    display: block;
+}
+.tholi-cap-desc {
+    font-size: 10px;
+    color: #7d6756;
+    margin-top: 2px;
+    display: block;
+}
+
+/* 4. Payment Options Selector */
+.tholi-payment-selector {
+    margin-bottom: 18px;
+}
+.tholi-payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 6px;
+}
+.tholi-pay-opt {
+    border: 2px solid #ecd9c7;
+    border-radius: 14px;
+    padding: 12px;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+.tholi-pay-opt.active {
+    border-color: #8d5624;
+    background: #fff9f5;
+    box-shadow: 0 2px 8px rgba(141, 86, 36, 0.15);
+}
+.tholi-pay-opt input {
+    display: none;
+}
+.tholi-pay-opt-icon {
+    font-size: 22px;
+}
+.tholi-pay-opt-text strong {
+    font-size: 12px;
+    color: #2e1d11;
+    display: block;
+}
+.tholi-pay-opt-text small {
+    font-size: 10px;
+    color: #16a34a;
+    font-weight: 700;
+}
+
+/* 5. Courier Logistics Partners Ribbon */
+.tholi-courier-strip {
+    background: #faf6f1;
+    border-top: 1px solid var(--tholi-border);
+    padding: 24px 0;
+    text-align: center;
+}
+.tholi-courier-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #7d6756;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+.tholi-courier-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.tholi-courier-tag {
+    background: #fff;
+    border: 1px solid #ebd8c6;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4a392c;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* 6. Order Tracking Modal */
+.tholi-track-search-box {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+}
+.tholi-track-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #d8c2b0;
+    font-size: 13px;
+    font-family: inherit;
+}
+.tholi-track-btn {
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #8d5624;
+    color: #fff;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Lightbox Modal */
+.tholi-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.tholi-lightbox-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    animation: zoomIn 0.25s ease-out;
+}
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.tholi-lightbox-img-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #f7f3ee;
+}
+.tholi-lightbox-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tholi-lightbox-footer {
+    padding: 16px 20px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .tholi-capacity-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tholi-flash-deal-banner {
+        justify-content: center;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .tholi-capacity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tholi-payment-options {
+        grid-template-columns: 1fr;
+    }
+}
