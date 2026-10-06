@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সব ব্যাগ কালেকশন — থলি (Tholi) | প্রিমিয়াম উইমেন্স ব্যাগ শপ</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/tholi-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="tholi-body">
+
+<!-- Top Luxury Announcement Banner -->
+<div class="tholi-topbar">
+    <div class="tholi-container tholi-topbar-inner">
+        <div class="tholi-topbar-content">
+            <span class="tholi-sparkle-icon">✨</span>
+            <span>যেকোনো ২টি ব্যাগ নিলে <strong>৳১০০ অতিরিক্ত ছাড়</strong> · ক্যাশ অন ডেলিভারি সারা বাংলাদেশে 🇧🇩</span>
+        </div>
+        <div class="tholi-topbar-contact">
+            <a href="tel:8801793648214">📞 01793-648214</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="tholi-header">
+    <div class="tholi-container tholi-header-inner">
+        <a href="index.html" class="tholi-brand">
+            <div class="tholi-brand-icon">থ</div>
+            <div class="tholi-brand-text">
+                <div class="tholi-brand-title">থলি <span class="tholi-badge-tag">Tholi</span></div>
+                <div class="tholi-brand-sub">প্রিমিয়াম উইমেন্স ব্যাগ কালেকশন</div>
+            </div>
+        </a>
+        <nav class="tholi-nav">
+            <a href="index.html">হোম</a>
+            <a href="shop.html" style="color: #8d5624; font-weight: 700;">সব কালেকশন</a>
+            <a href="index.html#combo-deal" class="tholi-nav-combo">🎁 কম্বো ডিল (৳১০০ ছাড়)</a>
+            <a href="about.html">আমাদের সম্পর্কে</a>
+            <a href="contact.html">যোগাযোগ</a>
+        </nav>
+        <div class="tholi-header-actions">
+            <a href="track.html" class="tholi-track-btn" style="text-decoration: none; padding: 6px 12px; font-size: 12px; background: #faf4ee; color: #8d5624; border: 1px solid #dfc3aa; border-radius: 12px;">
+                🔍 ট্র্যাক অর্ডার
+            </a>
+            <a href="https://wa.me/8801793648214" target="_blank" class="tholi-btn-wa">
+                <span class="tholi-wa-icon">💬</span>
+                <span class="tholi-wa-text">WhatsApp</span>
+            </a>
+            <a href="index.html#checkout" class="tholi-btn-order">
+                <span>অর্ডার করুন</span>
+                <span class="tholi-cart-count" id="tholi-cart-badge">১</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="tholi-page-hero">
+    <div class="tholi-container">
+        <div class="tholi-breadcrumb">
+            <a href="index.html">হোম</a>
+            <span>/</span>
+            <strong>সব কালেকশন</strong>
+        </div>
+        <h1 class="tholi-page-title">প্রিমিয়াম উইমেন্স ব্যাগ শপ</h1>
+        <p class="tholi-page-subtitle">
+            অফিস, কলেজ কিংবা ক্যাজুয়াল ভ্রমণের জন্য ট্রেন্ডি ও রুচিশীল লাক্সারি ব্যাগের সম্পূর্ণ কালেকশন। ১০০% ক্যাশ অন ডেলিভারি।
+        </p>
+    </div>
+</div>
+
+<main class="tholi-inner-content">
+    <div class="tholi-container">
+        
+        <div class="tholi-shop-toolbar">
+            <div class="tholi-filter-tags">
+                <a href="#all" class="tholi-filter-btn active">সব ব্যাগ (১৩টি কালার ভ্যারিয়েন্ট)</a>
+                <a href="index.html#nova-tote" class="tholi-filter-btn">নোভা টোট ব্যাগ (৳১,০৯৯)</a>
+                <a href="index.html#aura-shoulder" class="tholi-filter-btn">অরা শোল্ডার ব্যাগ (৳১,১৯৯)</a>
+                <a href="index.html#knot-crossbody" class="tholi-filter-btn">নট ক্রস বডি ব্যাগ (৳৭০০)</a>
+            </div>
+            <div style="font-size: 13px; color: #7d6756; font-weight: 600;">
+                📦 সারা দেশে হোম ডেলিভারি
+            </div>
+        </div>
+
+        <div class="tholi-products-container" id="tholi-products-list"></div>
+
+        <div style="margin-top: 40px; background: linear-gradient(135deg, #fef3c7, #faf4ee); border: 1px dashed #d49b28; border-radius: 20px; padding: 30px; text-align: center;">
+            <h3 style="font-size: 20px; font-weight: 800; color: #8d5624; margin-bottom: 8px;">🎁 স্পেশাল কম্বো অফার!</h3>
+            <p style="font-size: 14px; color: #665040; margin-bottom: 16px;">যেকোনো ২টি বা তার বেশি ব্যাগ একসাথে অর্ডার করলেই সাথে সাথে অতিরিক্ত ৳১০০ ক্যাশ ডিসকাউন্ট!</p>
+            <a href="index.html#combo-deal" class="tholi-btn-main" style="display: inline-block; text-decoration: none; padding: 10px 24px;">
+                কম্বো বিল্ডার ওপেন করুন →
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="tholi-footer">
+    <div class="tholi-container">
+        <div class="tholi-footer-grid">
+            <div class="tholi-footer-col">
+                <div class="tholi-brand" style="margin-bottom: 12px;">
+                    <div class="tholi-brand-icon">থ</div>
+                    <div class="tholi-brand-text">
+                        <div class="tholi-brand-title" style="color: #fff;">থলি <span class="tholi-badge-tag">Tholi</span></div>
+                        <div class="tholi-brand-sub" style="color: #c4a882;">প্রিমিয়াম উইমেন্স ব্যাগ কালেকশন</div>
+                    </div>
+                </div>
+                <p class="tholi-footer-desc">
+                    থলি (Tholi) — রুচিশীল আধুনিক নারীদের জন্য প্রিমিয়াম কোয়ালিটি সিনথেটিক লেদার হ্যান্ডব্যাগ, টোট ব্যাগ ও ক্রস বডি কালেকশন। ক্যাশ অন ডেলিভারি সারা বাংলাদেশে।
+                </p>
+                <div class="tholi-footer-love">Made with ❤️ in Bangladesh 🇧🇩</div>
+            </div>
+            <div class="tholi-footer-col">
+                <h4 class="tholi-footer-heading">কালেকশন</h4>
+                <ul class="tholi-footer-links">
+                    <li><a href="index.html#nova-tote">👜 নোভা টোট ব্যাগ</a></li>
+                    <li><a href="index.html#aura-shoulder">💼 অরা শোল্ডার ব্যাগ</a></li>
+                    <li><a href="index.html#knot-crossbody">🎀 নট ক্রস বডি ব্যাগ</a></li>
+                    <li><a href="index.html#combo-deal" style="color: #e6a860; font-weight: 700;">🎁 স্পেশাল কম্বো অফার (৳১০০ ছাড়)</a></li>
+                </ul>
+            </div>
+            <div class="tholi-footer-col">
+                <h4 class="tholi-footer-heading">গ্রাহক সেবা ও পলিসি</h4>
+                <ul class="tholi-footer-links">
+                    <li><a href="return-policy.html">🔄 ৩ দিনে সহজ রিটার্ন ও এক্সচেঞ্জ</a></li>
+                    <li><a href="privacy-policy.html">🔒 গোপনীয়তা নীতি (Privacy)</a></li>
+                    <li><a href="terms.html">📜 ব্যবহারের শর্তাবলী (Terms)</a></li>
+                    <li><a href="track.html">🚚 লাইভ পার্সেল ট্র্যাকিং</a></li>
+                    <li><a href="about.html">👜 আমাদের সম্পর্কে</a></li>
+                </ul>
+            </div>
+            <div class="tholi-footer-col">
+                <h4 class="tholi-footer-heading">যোগাযোগ</h4>
+                <div class="tholi-footer-contact">
+                    <p>📞 <strong>ফোন:</strong> <a href="tel:8801793648214">01793-648214</a></p>
+                    <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/8801793648214" target="_blank">+880 1793-648214</a></p>
+                    <p>📍 <strong>ঠিকানা:</strong> ধানমন্ডি, ঢাকা, বাংলাদেশ</p>
+                    <p>⏰ <strong>সময়:</strong> সকাল ৯:০০ টা - রাত ১১:০০ টা</p>
+                </div>
+            </div>
+        </div>
+        <div class="tholi-footer-bottom">
+            <p>© 2026 থলি (Tholi) — choynoy.com। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p>সারা দেশে বিশ্বস্ত ক্যাশ অন ডেলিভারি সার্ভিস 🚚</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/tholi-app.js"></script>
+</body>
+</html>

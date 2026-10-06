@@ -35,10 +35,11 @@
             <div class="tholi-footer-col">
                 <h4 class="tholi-footer-heading">গ্রাহক সেবা ও পলিসি</h4>
                 <ul class="tholi-footer-links">
-                    <li><a href="#faq">সচরাচর জিজ্ঞাসা (FAQ)</a></li>
-                    <li><a href="#faq">৩ দিনে সহজ রিটার্ন ও এক্সচেঞ্জ পলিসি</a></li>
-                    <li><span style="color: #4ade80;">১০০% ক্যাশ অন ডেলিভারি (পণ্য দেখে পেমেন্ট)</span></li>
-                    <li><span>ঢাকায় ২৪-৪৮ ঘণ্টা, ঢাকার বাইরে ২-৩ দিনে ডেলিভারি</span></li>
+                    <li><a href="<?php echo esc_url(home_url('/return-policy.html')); ?>">🔄 ৩ দিনে সহজ রিটার্ন ও এক্সচেঞ্জ পলিসি</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/privacy-policy.html')); ?>">🔒 গোপনীয়তা নীতি (Privacy Policy)</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/terms.html')); ?>">📜 ব্যবহারের শর্তাবলী (Terms)</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/track.html')); ?>">🚚 লাইভ পার্সেল ট্র্যাকিং</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/about.html')); ?>">👜 আমাদের সম্পর্কে (About Us)</a></li>
                 </ul>
             </div>
 

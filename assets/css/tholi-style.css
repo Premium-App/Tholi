@@ -2103,3 +2103,199 @@ body.tholi-body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================================
+   12. INNER PAGES & WOOCOMMERCE STYLES (Audit Upgrade)
+======================================================== */
+.tholi-page-hero {
+    background: linear-gradient(135deg, #2e1d11 0%, #4a301c 100%);
+    color: #fff;
+    padding: 60px 0 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.tholi-page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 30%, rgba(212, 155, 40, 0.15), transparent 70%);
+}
+.tholi-page-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.tholi-page-subtitle {
+    font-size: 15px;
+    color: #dfc3aa;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+.tholi-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #c4a882;
+}
+.tholi-breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.tholi-breadcrumb span {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tholi-inner-content {
+    padding: 60px 0 80px;
+    background: #faf8f5;
+}
+.tholi-content-card {
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    line-height: 1.8;
+    color: #4a392c;
+}
+.tholi-content-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2e1d11;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tholi-content-card h2:first-child {
+    margin-top: 0;
+}
+.tholi-content-card p {
+    font-size: 14px;
+    color: #614e3f;
+    margin-bottom: 16px;
+}
+.tholi-content-card ul, .tholi-content-card ol {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: #614e3f;
+}
+.tholi-content-card li {
+    margin-bottom: 8px;
+}
+
+/* Contact Page Grid */
+.tholi-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+}
+.tholi-contact-info-card {
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 20px;
+    padding: 36px;
+}
+.tholi-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.tholi-contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #faf4ee;
+    border: 1px solid #ebd8c6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+.tholi-contact-text strong {
+    display: block;
+    font-size: 14px;
+    color: #2e1d11;
+    margin-bottom: 2px;
+}
+.tholi-contact-text span, .tholi-contact-text a {
+    font-size: 13px;
+    color: #614e3f;
+    text-decoration: none;
+}
+.tholi-contact-text a:hover {
+    color: #8d5624;
+}
+
+/* Shop Filter Bar */
+.tholi-shop-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--tholi-border);
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.tholi-filter-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.tholi-filter-btn {
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #faf6f1;
+    border: 1px solid #ebd8c6;
+    font-size: 13px;
+    font-weight: 700;
+    color: #614e3f;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.tholi-filter-btn.active, .tholi-filter-btn:hover {
+    background: #8d5624;
+    color: #fff;
+    border-color: #8d5624;
+}
+
+/* Tracking Page Box */
+.tholi-track-full-box {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--tholi-border);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 800px) {
+    .tholi-contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .tholi-content-card {
+        padding: 24px 18px;
+    }
+    .tholi-page-title {
+        font-size: 26px;
+    }
+}
+
